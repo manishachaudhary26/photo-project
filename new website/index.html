@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My new Website</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css>
+        <style>
+            .menu-fixed-top{
+                top: 70px;
+                opacity: 0;
+            }
+        </style>
+</head>
+
+<body>
+   
+    <header>
+        <nav>
+            <div class="logo">
+                Photo<span>pi</span>X
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/Gallery.html">Gallery</a>
+                <a href="/contact.html">Contact</a>
+
+            </div>
+            <div class="icon">
+               
+                <!-- <i class="fa fa-search">serch</i> -->
+                <input type="text" name="" placeholder="serch">
+
+                <a href="#">Login</a>
+          
+            </div>
+        </nav>
+
+        <!-- section 1 -->
+
+        <section class="h-text">
+            <!-- <i class="fa fa-camera" id="camera"></i> -->
+            <h1  data-aos="fade-up">Capturing the moments that captivate your heart.</h1>
+            <input type="text" name="camera" placeholder="serch here...">
+            <button><i class="fa fa-serch">search</i></button>
+
+        </section>
+    </header>
+
+    <!-- section 2 -->
+
+    <section>
+
+        <div class="filter-gallery">
+            <div class="portfolio-menu">
+                <ul>
+                    <li class="active" ata-filter="*">All</li>
+                    <li data-filter=".nature">Nature</li>
+                    <li data-filter=".fashion">Fashion</li>
+                    <li data-filter=".wedding">wedding</li>
+
+                </ul>
+            </div>
+            <div class="portfolio-item">
+                <div class="item nature" data-aos="flip-left" data-aos-offset="100"data-aos-delay="100">
+                    <img src="img/nature1.jpg" width="100" height="100">
+                </div>
+                <div class="item fashion" data-aos="flip-left" data-aos-offset="100"data-aos-delay="100">
+                    <img src="img/fashion1.jpg" width="100" height="200">
+                </div>
+                <div class="item wedding" data-aos="flip-left" data-aos-offset="100"data-aos-delay="300">
+                    <img src="img/wedding1.jpg" width="100" height="100">
+                </div>
+                <div class="item nature" data-aos="zoom-in" data-aos-offset="100"data-aos-delay="100">
+                    <img src="img/nature2.jpg" width="100" height="100">
+                </div>
+                <div class="item fashion" data-aos="zoom-in" data-aos-offset="100"data-aos-delay="200">
+                    <img src="img/fashion2.jpg" width="100" height="100">
+                </div>
+                <div class="item wedding" data-aos="zoom-in" data-aos-offset="100"data-aos-delay="300">
+                    <img src="img/wedding2.jpg" width="100" height="100">
+                </div>
+                <div class="item nature" data-aos="zoom-in-up" data-aos-offset="100"data-aos-delay="100">
+                    <img src="img/nature3.jpg" width="100" height="100">
+                </div>
+                <div class="item fashion"data-aos="zoom-in-up" data-aos-offset="100"data-aos-delay="200">                    <img src="img/fashion3.jpg" width="100" height="100">
+                </div>
+                <div class="item wedding"data-aos="zoom-in-up" data-aos-offset="100"data-aos-delay="200">
+                    <img src="img/wedding3.jpg" width="100" height="100">
+                </div>
+               
+            
+            </div>
+  
+
+          
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript">
+
+        $('.portfolio-item').isotope({
+            // options
+            itemSelector: '.item',
+            layoutMode: 'fitRows'
+        });
+ $('.portfolio-menu ul li').click(function(){
+            $('.portfolio-menu ul li').removeClass('active');
+                $(this).addClass('active');
+
+                var selector = $(this).attr('data-filter');
+                $('.portfolio-item').isotope({
+                    filter:selector
+                });
+                return false;
+       
+
+        });
+    </script>
+
+     <!-- section 3 -->
+    <section class="member">
+        <div class="member-Info"data-aos="zoom-in-up" data-aos-offset="100"data-aos-delay="100">
+            <h1>Our <span>Information</span></h1>
+            <h3>About me</h3>
+            
+        </div>
+        <div class="member-card"data-aos="zoom-in-down" data-aos-offset="100"data-aos-delay="200">
+            <img src="img/watsapp image 2.jpeg" width="150" height="150">
+            <p>
+             i'm from Gujarat.Right now i'm studing in computer science engineering from laxmi Institute. I love to drink coffee everyday.It release stress from our mind.
+            </p>
+            <h2>* Manisha Chaudhary</h2>
+
+            <img src="img/facebook.png" width="100">
+            <img src="img/instagram.png" width="100">
+            <img src="img/watsapp.png" width="100">
+            <img src="img/linkedin.png" width="100"> 
+        </div>
+        <div class="m-images"data-aos="zoom-in" data-aos-offset="100"data-aos-delay="300">
+            <img src="img/s3.jpg" width="150" height="150">
+            <img src="img/s7.jpg" width="150" height="150">
+            <img src="img/s8.jpg" width="150" height="150">
+            <img src="img/s9.jpg" width="150" height="150">
+            <img src="img/s6.jpg" width="150" height="150">
+            <img src="img/s4.jpg" width="150" height="150">
+            
+        </div>
+    </section>
+    <footer>
+        <div class="newsletter">
+            <div data-aos="fade-up" data-aos-offset="200">
+                <h2>Subscribe our newsletter</h2>
+                <p>We're team of non-cynics who truly care for our work.</p>
+            </div>
+            <div>
+                <label class="ntext" data-aos="fade-up" data-aos-offset="200">
+                    <input type="text" name="" placeholder="Enter your mail">
+                 
+                    <button>Subscribe</button>
+                  
+                </label>
+            </div>
+           
+        </div>
+   <div class="f-contact">
+    <!-- data-aos="fade-up" data-aos-offset="200"> -->
+       <div>
+           <h1>information</h1>
+           <p>Contact me on from hear!</p>
+           <img src="img/watsapp.png" width="25px">
+           <img src="img/facebook.png" width="25px">
+           <img src="img/linkedin.png" width="25px">
+           
+          
+         
+       </div>
+       <div>
+           <h1>Useful Links</h1>
+           <p>About us</p>
+           <p>Gallery</p>
+           <p>Pricing plans</p>
+       </div>
+
+       <div>
+        <h1>details</h1>
+        <p>Photographers</p>
+        <p>About</p>
+        <p>princig plans</p>
+    </div>
+
+    <div>
+        <h1>Helps & Support</h1>
+        <p>Privacy Policy</p>
+        <p>Technical Support</p>
+        <p>Customer care</p>
+    </div>
+   </div>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+  </script>
+  
+ 
+ 
+</body>
+
+</html>
